@@ -1,9 +1,11 @@
 class StandardAbsoluteDeviationCalculator:
     def __init__(self, numbers):
-        if not all(isinstance(x, int) for x in numbers):
-            raise ValueError("Input list must contain only integers")
+        if not isinstance(numbers, list):
+            raise ValueError("The input needs to be a list")
         if len(numbers) == 0:
             raise ValueError("Input list cannot be empty")
+        if not all(isinstance(x, int) for x in numbers):
+            raise ValueError("Input list must contain only integers")
 
         self.numbers = numbers
 
