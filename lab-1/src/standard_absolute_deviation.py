@@ -4,8 +4,8 @@ class StandardAbsoluteDeviationCalculator:
             raise ValueError("The input needs to be a list")
         if len(numbers) == 0:
             raise ValueError("Input list cannot be empty")
-        if not all(isinstance(x, int) for x in numbers):
-            raise ValueError("Input list must contain only integers")
+        if not all(isinstance(x, (int, float)) for x in numbers):
+            raise ValueError("Input list must contain only integers and floats")
 
         self.numbers = numbers
 
@@ -15,7 +15,7 @@ class StandardAbsoluteDeviationCalculator:
         standard_absolute_deviation = sum_of_absolute_differences / len(self.numbers)
         return standard_absolute_deviation
 
-my_numbers = [1, 2, 3, 4, 5]
+my_numbers = [1, 2, 3, 4]
 calculator = StandardAbsoluteDeviationCalculator(my_numbers)
 result = calculator.calculate()
 print(result)
