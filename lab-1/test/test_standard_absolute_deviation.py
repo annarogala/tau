@@ -1,5 +1,5 @@
 import pytest
-from calculator.standard_absolute_deviation import StandardAbsoluteDeviationCalculator
+from src.standard_absolute_deviation import StandardAbsoluteDeviationCalculator
 
 
 def test_correct_output():
