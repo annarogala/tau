@@ -8,17 +8,17 @@ Feature: Login with wrong password
   Scenario: Login with wrong password in Firefox browser
     Given Firefox browser opened
     When navigate to 'https://practicetestautomation.com/practice-test-login'
-    When enter login 'student'
-    When enter password 'wrong_password'
-    When click submit button
+    And enter login 'student'
+    But enter password 'wrong_password'
+    And click submit button
     Then wrong password error message is displayed
-    Then browser is closed
+    And browser is closed
 
   Scenario: Login with wrong password in Chrome browser
     Given Chrome browser opened
     When navigate to 'https://practicetestautomation.com/practice-test-login'
-    When enter login 'student'
-    When enter password 'wrong_password'
-    When click submit button
+    And enter login 'student'
+    But enter password 'wrong_password'
+    And click submit button
     Then wrong password error message is displayed
-    Then browser is closed
+    And browser is closed

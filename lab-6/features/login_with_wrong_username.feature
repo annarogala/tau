@@ -7,17 +7,17 @@ Feature: Login with wrong username
   Scenario: Login with wrong username in Firefox browser
     Given Firefox browser opened
     When navigate to 'https://practicetestautomation.com/practice-test-login'
-    When enter login 'wrong_username'
-    When enter password 'Password123'
-    When click submit button
+    And enter password 'Password123'
+    But enter login 'wrong_username'
+    And click submit button
     Then wrong username error message is displayed
-    Then browser is closed
+    And browser is closed
 
   Scenario: Login with wrong username in Chrome browser
     Given Chrome browser opened
     When navigate to 'https://practicetestautomation.com/practice-test-login'
-    When enter login 'wrong_username'
-    When enter password 'Password123'
-    When click submit button
+    And enter password 'Password123'
+    But enter login 'wrong_username'
+    And click submit button
     Then wrong username error message is displayed
-    Then browser is closed
+    And browser is closed
