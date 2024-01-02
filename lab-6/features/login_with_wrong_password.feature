@@ -4,7 +4,6 @@ Feature: Login with wrong password
   I want to see an error message when I login with wrong password,
   So I know that I used the wrong password.
 
-.
   Scenario: Login with wrong password in Firefox browser
     Given Firefox browser opened
     When navigate to 'https://practicetestautomation.com/practice-test-login'
